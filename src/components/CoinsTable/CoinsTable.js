@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TableHeader from './TableHeader';
 import Coins from './Coins';
 
 const CoinsTable = () => {
+
+  const [search, setSearch] = useState("");
+
   return (
     <div>
-        <TableHeader/>
-        <Coins/>
+        <TableHeader setSearch={setSearch}/>
+        <Coins search={search}/>
     </div>
   )
 }

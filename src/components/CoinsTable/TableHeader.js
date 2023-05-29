@@ -1,7 +1,3 @@
-import axios from 'axios';
-import React, { useEffect, useState, useCallback } from 'react';
-import { CoinList } from '../../config/api';
-import { CryptoState } from '../../CryptoContext';
 import { 
   Container, 
   TextField, 
@@ -13,9 +9,8 @@ import {
 
 
 
-const TableHeader = () => {
+const TableHeader = ({ setSearch }) => {
 
-  const [search, setSearch] = useState("");
 
   const darkTheme = createTheme({
     palette: {
